@@ -290,6 +290,7 @@ progress {
         width: 200px;
         height: 60px;
         padding: 5px;
+        top: 100px;
     }
 }
 
