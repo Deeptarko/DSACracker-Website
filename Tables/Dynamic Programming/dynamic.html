@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Programing</title>
+    <link rel="stylesheet" href="./dynamic.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input type="search" name="" id="searchItem" class="searchItem" />
+      <div class="btn-container">
+        <button class="btn" id="saveBtn">Save</button>
+        <button class="btn" id="showBtn">Show</button>
+      </div>
+
+      <div class="table" id="table">
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Q-Id</th>
+              <th>Questions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="customCheck1"
+                  class="check"
+                />
+              </td>
+              <td><label for="customCheck1">1</label></td>
+              <td><a href="https://practice.geeksforgeeks.org/problems/coin-change2448/1">Coin change problem</a></td>
+            </tr>
+            <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck2"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck2">2</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1">Knapsack Problem</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck3"
+                    class="check"
+                    />
+                </td>
+                <td><label for="customCheck3">3</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/ncr1019/1">Binomial Coefficient Problem</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck4"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck4">4</label></td>
+                <td><a href="https://www.geeksforgeeks.org/permutation-coefficient/">Permutation Coefficient Problem</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck5"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck5">5</label></td>
+                <td><a href="https://www.geeksforgeeks.org/program-nth-catalan-number/">Program for nth catalan number</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck6"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck6">6</label></td>
+                <td><a href="https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/">Matrix Chain multiplication</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck7"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck7">7</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/edit-distance3702/1">Edit Distance</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck8"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck8">8</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1">Subset Sum problem</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck9"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck9">9</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/friends-pairing-problem5425/1">Friends pairing problem</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck10"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck10">10</label></td>
+                <td><a href="https://www.geeksforgeeks.org/gold-mine-problem/">Gold mine problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck11"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck11">11</label></td>
+                <td><a href="https://www.geeksforgeeks.org/assembly-line-scheduling-dp-34/">Assembly line scheduling problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck12"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck12">12</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/painting-the-fence3727/1">Painting the Fence problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck13"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck13">13</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/cutted-segments1642/1">Maximize the cut segments</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck14"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck14">14</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1">Longest common subsequence</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck15"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck15">15</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1">Longest Repeated Subsequence</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck16"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck16">16</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1">Longest Increasing Subsequence</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck17"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck17">17</label></td>
+                <td><a href="https://www.geeksforgeeks.org/space-optimized-solution-lcs/">Space optimized solution of LCS</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck18"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck18">18</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/lcs-of-three-strings/0">LCS of three strings</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck19"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck19">19</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1">Maximum sum increasing subsequence</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck20"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck20">20</label></td>
+                <td><a href="https://www.geeksforgeeks.org/count-subsequences-product-less-k/">Count all subsequences having product less than k</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck21"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck21">21</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-subsequence-such-that-difference-between-adjacents-is-one4724/1">Longest subsequence such that difference between adjacent is one</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck22"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck22">22</label></td>
+                <td><a href="https://www.geeksforgeeks.org/maximum-subsequence-sum-such-that-no-three-are-consecutive/">Maximum subsequence sum such that no three are consecutive</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck23"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck23">23</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1">Egg dropping problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck24"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck24">24</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/max-length-chain/1">Maximum length chain of pairs</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck25"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck25">25</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix0806/1">Maximum size square sub-matrix with all 1s</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck26"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck26">26</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/pairs-with-specific-difference/0">Maximum sum of pairs with specific difference</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck27"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck27">27</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/path-in-matrix3805/1">Minimum cost path problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck28"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck28">28</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/maximum-difference-of-zeros-and-ones-in-binary-string4111/1">Minimum difference of zeros and ones in binary string</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck29"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck29">29</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1">Minimum number of jumps to reach end</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck30"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck30">30</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/minimum-cost-to-fill-given-weight-in-a-bag1956/1">Minimum cost to fill given weight in a bag</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck31"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck31">31</label></td>
+                <td><a href="https://www.geeksforgeeks.org/minimum-removals-array-make-max-min-k/">Minimum removals from array to make max-min<=K</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck32"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck32">32</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/longest-common-substring1452/1">Longest common substring</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">33</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/reach-a-given-score-1587115621/1">Count number of ways to reach given score in a game</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+               
+                <td><label for="customCheck33">34</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/bbt-counter4914/1">Count balanced binary trees of height h</a></td>
+              </tr>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">35</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1">Largest sum contiguous subarray</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">36</label></td>
+                <td><a href="https://www.geeksforgeeks.org/smallest-sum-contiguous-subarray/">Smallest sum contiguous subarray</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">37</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1">Unbounded knapsack</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">38</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/word-break1352/1">Word break problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">39</label></td>
+                <td><a href="https://www.geeksforgeeks.org/vertex-cover-problem-set-1-introduction-approximate-algorithm-2/">Vertex Cover Problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">40</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1">Palindrome partitioning problem</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">41</label></td>
+                <td><a href="https://practice.geeksforgeeks.org/problems/optimal-strategy-for-a-game-1587115620/1">Optimal strategy for a game</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">42</label></td>
+                <td><a href="https://www.geeksforgeeks.org/optimal-binary-search-tree-dp-24/">Optimal binary search tree</a></td>
+              </tr>
+			  <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="customCheck33"
+                    class="check"
+                  />
+                </td>
+                <td><label for="customCheck33">43</label></td>
+                <td><a href="https://leetcode.com/problems/maximum-length-of-pair-chain/">Maximum length of pair chain</a></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./dynamic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    line-height: 1.6;
+    overflow-y: hidden;
+}
+
+.percentage {
+    margin-left: 3rem;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: center;
+    /* display: inline-block; */
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navlinks {
+    margin-left: 40vw;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+section#problem {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    /* Scroll Snap */
+    scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+
+/*HOme Button of Start Coding*/
+
+video {
+    position: absolute;
+    z-index: 0;
+}
+
+.btnHome {
+    position: relative;
+    z-index: 2;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    outline: none;
+    border: 3px solid #42fBf2;
+    background-color: transparent;
+    top: 30%;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.btnHome:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btnHome:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #42fBf2;
+}
+
+.btnHome:hover:before {
+    transform: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+/* Section Images */
+
+section#home {
+    /* background: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+    no-repeat center center/cover; */
+    overflow: hidden;
+}
+
+section#home video {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/*PROBLEM SECTION CSS*/
+
+section#problem {
+    background-color: #f3f7f7;
+}
+
+.headproblem {
+    color: black;
+    margin-top: 40px;
+}
+
+.problem-container {
+    /* border: 2px solid blue; */
+    width: 90%;
+    height: 750px;
+    overflow-y: scroll;
+}
+.container-about{
+    font-size: 25px;
+    width:80%;
+}
+
+.box {
+    background-color: #fff;
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    color: black;
+    width: 600px;
+    height: 300px;
+    font-size: 1.5em;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    transition: 0.5s all ease-in-out;
+}
+
+.box:hover {
+    cursor: pointer;
+    /* transform: scaleX(1.2); */
+    transform: scale(1.1);
+}
+
+.box {
+    text-align: left;
+}
+
+.btn:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.percent {
+    margin-left: 40px;
+}
+
+.box label {
+    font-size: 200%;
+    margin: 40px;
+    padding: 10px;
+}
+
+progress {
+    margin: 40px;
+    width: 90%;
+    height: 6px;
+}
+
+.btn {
+    margin-left: 40px;
+    width: 300px;
+    height: 50px;
+    background: red;
+    color: white;
+    font-size: 30px;
+    border: none;
+    /* margin-top:1rem; */
+    border-radius: 10px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 764px) {
+    .problem-container {
+        width: 400px;
+        height: 400px;
+    }
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+    .box label {
+        font-size: 22px;
+    }
+    progress {
+        width: 70%;
+    }
+    .btn {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .headproblem {
+        margin-top: 0px;
+    }
+    #array label {
+        font-size: 150%;
+    }
+    .navlinks {
+        width: 50%;
+        margin-left: 30vw;
+    }
+    .navlinks ul li {
+        margin: 2px;
+        font-size: 14px;
+    }
+    #home video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .btnHome {
+        width: 200px;
+        height: 60px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .navlinks {
+        margin-left: 12.5rem;
+    }
+    .navlinks ul li {
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 830px) {
+    .navlinks {
+        margin-left: 19.5rem;
+    }
+    .navlinks ul li {
+        margin: 2px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #home h1,
+    .leadHome {
+        font-size: 0;
+    }
+}
+
+
+/* Card Css */
+
+#contact {
+    overflow-x: scroll;
+    height: 90%;
+}
+
+.container-card {
+    display: flex;
+    max-width: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-family: roboto;
+    text-align: center;
+}
+
+.card-image {
+    grid-area: image;
+}
+
+.card-text {
+    grid-area: text;
+}
+
+.card-stats {
+    grid-area: stats;
+}
+
+.card-image {
+    grid-area: image;
+    background: url("img1.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date {
+    color: rgb(255, 7, 110);
+    font-size: 13px;
+}
+
+.card-text h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card-stats {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: gray;
+}
+
+.card-stats .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.card-text {
+    margin-top: 6rem;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+}
+
+.card-text h3 {
+    color: black;
+}
+
+section#about,
+section#contact {
+    background-color: #333333;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60%;
+}
+
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Set a specific color for each brand */
+
+
+/* Facebook */
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #dd4b39;
+    color: white;
+}
